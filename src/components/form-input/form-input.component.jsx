@@ -1,4 +1,4 @@
-import { React, Fragment } from "react";
+import { React } from "react";
 import "./form-input.styles.css";
 
 export default function FormInput({ label, inputOptions }) {

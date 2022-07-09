@@ -1,14 +1,16 @@
-import { React, useEffect } from "react";
+import { React} from "react";
+import SignInForm from "../../components/sign-in-form/sign-in.component";
 import SignUpForm from "../../components/sign-up-forms/sign-up-form.component";
-import {
-  signInWithGooglePopup,
-  createUserDocumentFromAuth,
-  signInWithGoogleRedirect,
-} from "../../utils/firebase/firebase.utils";
+import './authentication.styles.css'
+//import {
+//   signInWithGooglePopup,
+//   createUserDocumentFromAuth,
+//   signInWithGoogleRedirect,
+// } from "../../utils/firebase/firebase.utils";
 //import { auth,signInWithGooglePopup, createUserDocumentFromAuth, signInWithGoogleRedirect } from "../../utils/firebase/firebase.utils";
 // import {getRedirectResult} from 'firebase/auth';
 
-export default function SignIn() {
+export default function Authentication() {
   // this logic can be used if we need page redirection on sign in
   // useEffect( ()=>{
   //     async function userRedirectSignIn(){
@@ -22,11 +24,11 @@ export default function SignIn() {
   //     userRedirectSignIn();
 
   // },[]);
-  const logGoogleUser = async () => {
-    // user object is being destructured from the response.
-    const { user } = await signInWithGooglePopup();
-    createUserDocumentFromAuth(user);
-  };
+  // const logGoogleUser = async () => {
+  //   // user object is being destructured from the response.
+  //   const { user } = await signInWithGooglePopup();
+  //   createUserDocumentFromAuth(user);
+  // };
   //   const logGoogleUserRedirect = async () => {
   //     const {user} = await signInWithGoogleRedirect();
   //     // createUserDocumentFromAuth(user)
@@ -34,9 +36,8 @@ export default function SignIn() {
   //   };
 
   return (
-    <div>
-      <h1>Sign In page</h1>
-      <button onClick={logGoogleUser}>Sign In With Google</button>
+    <div className="authentication-container">
+      <SignInForm />
       <SignUpForm />
     </div>
   );

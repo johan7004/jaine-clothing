@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,KAAK,EAAE,KAAK;CAKb;;AARD,AAKE,kBALgB,CAKhB,EAAE,CAAC;EACD,MAAM,EAAE,MAAM;CACf",
-    "sources": [
-        "sign-up-forms.styles.scss"
-    ],
-    "names": [],
-    "file": "sign-up-forms.styles.css"
-}
+{"version":3,"sources":["sign-up-forms.styles.scss","sign-up-forms.styles.css"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,sBAAA;EACA,YAAA;ACCF;ADCE;EACE,cAAA;ACCJ","file":"sign-up-forms.styles.css"}
