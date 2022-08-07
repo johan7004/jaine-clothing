@@ -1,16 +1,15 @@
 body {
   margin: 0;
-  padding:20px 40px;
-  font-family: 'Barlow', sans-serif;
-  font-family: 'Indie Flower', cursive;
-  font-family: 'Karla', sans-serif;
+  padding: 20px 40px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Indie Flower", cursive;
+  font-family: "Karla", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 a {
