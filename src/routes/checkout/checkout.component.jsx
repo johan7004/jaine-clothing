@@ -1,10 +1,9 @@
 import { React, useContext } from "react";
 import { CartStatusContext } from "../../components/contexts/cart-open.context";
-import CheckoutItem from './../../components/checkout-items/checkout-item.component'
+import CheckoutItem from "./../../components/checkout-items/checkout-item.component";
 import "./checkout.styles.css";
 export default function Checkout() {
-  const { cartItems, addItemToCart, decreaseItemFromCart, removeItemFromCart } =
-    useContext(CartStatusContext);
+  const { cartItems, cartTotal } = useContext(CartStatusContext);
 
   return (
     <div className="checkout-container">
@@ -28,15 +27,12 @@ export default function Checkout() {
 
       {cartItems.length !== 0 ? (
         cartItems.map((cartItem) => {
-          return (
-            <CheckoutItem key= {cartItem.id} cartItem={cartItem} />
-          );
+          return <CheckoutItem key={cartItem.id} cartItem={cartItem} />;
         })
       ) : (
         <h1>Cart Empty! Add Items To Cart</h1>
       )}
-      <span className="total">Total : 0</span>
+      <span className="total">Total : ${cartTotal}</span>
     </div>
   );
 }
-
