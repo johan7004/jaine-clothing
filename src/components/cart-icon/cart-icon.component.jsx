@@ -3,7 +3,7 @@ import { CartStatusContext } from "./../contexts/cart-open.context";
 import "./cart-icon.style.css";
 import { ReactComponent as ShoppingIcon } from "./../../assets/shopping-bag.svg";
 export default function CartIcon() {
-  const { cartStatus, setCartStatus } = useContext(CartStatusContext);
+  const { cartStatus, setCartStatus, cartCount } = useContext(CartStatusContext);
 
   const toggleCartStatus = () => {
     !cartStatus ? setCartStatus(true) : setCartStatus(false);
@@ -12,7 +12,7 @@ export default function CartIcon() {
   return (
     <div className="cart-icon-container"  onClick={toggleCartStatus}>
       <ShoppingIcon className="shopping-icon" />
-      <span className="item-count">0</span>
+      <span className="item-count">{cartCount}</span>
     </div>
   );
 }
