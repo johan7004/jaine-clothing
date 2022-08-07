@@ -14,7 +14,7 @@ export default function CartDropdown() {
           return <CartItem key={item.id} cartItem={item} />;
         })}
       </div>
-      <Button>
+      <Button color="primary">
         <Link to="checkout">Checkout</Link>
       </Button>
     </div>
