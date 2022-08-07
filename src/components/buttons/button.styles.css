@@ -9,16 +9,11 @@
   background-color: black;
   text-transform: uppercase;
   font-weight: bolder;
+  color: white;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
-}
-.button-container a {
-  color: white;
-}
-.button-container a:hover {
-  color: black;
 }
 .button-container:hover {
   background-color: white;
