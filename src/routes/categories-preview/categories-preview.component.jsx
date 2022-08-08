@@ -6,7 +6,7 @@ import CategoryPreview from "./../../components/category-preview/category-previe
 export default function CategoriesPreview() {
   const { categoriesMap } = useContext(CategoriesContext);
 
-  console.log(categoriesMap)
+  
 
   return (
     <div className= "categories-preview-container">

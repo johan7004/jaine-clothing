@@ -5,7 +5,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/form-input.component";
-import Button from "../buttons/button.component";
+import Button ,{BUTTON_TYPE_COLORS} from "../buttons/button.component";
 import "./sign-in-forms.styles.css";
 
 const defaultFormFields = {
@@ -81,7 +81,7 @@ export default function SignInForm() {
         />
         <div className="buttons-container">
           <Button type="submit">Sign In</Button>
-          <Button type="button" onClick={signInWithGoogle} buttonType="google">
+          <Button type="button" onClick={signInWithGoogle} buttonType={BUTTON_TYPE_COLORS.google}>
             Google Sign In
           </Button>
         </div>

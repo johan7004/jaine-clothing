@@ -14,9 +14,7 @@ const addCartItem = (cartItems, productToAdd) => {
         ? { ...cartItem, quantity: cartItem.quantity + 1 }
         : cartItem
     );
-  } else {
-    console.log(`item does not exist in cart`);
-  }
+  } 
 
   // return new array with modified cartItems/ new cart item
 
@@ -36,8 +34,6 @@ const decreaseCartItem = (cartItems, productToAdd) => {
         ? { ...cartItem, quantity: cartItem.quantity - 1 }
         : cartItem
     );
-  } else {
-    console.log(`item does not exist in cart`);
   }
 
   // return new array with modified cartItems/ new cart item
@@ -83,7 +79,6 @@ export const CartOpenStatusProvider = ({ children }) => {
     setCartItems(decreaseCartItem(cartItems, productToAdd));
   };
   const removeItemFromCart = (productToAdd) => {
-    console.log(productToAdd.name);
     let removedArray = cartItems.filter((value) => {
       return value.name !== productToAdd.name;
     });
