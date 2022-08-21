@@ -6,6 +6,8 @@ import { CartStatusContext } from "./../../components/contexts/cart-open.context
 import { Outlet } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "./../../assets/crown.svg";
 import { signOutUser } from "./../../utils/firebase/firebase.utils.js";
+import {useSelector} from 'react-redux';
+import {selectCurrentUser} from './../../store/User/user-selector'
 import {
   NavigationContainer,
   NavLinks,
@@ -14,7 +16,8 @@ import {
 } from "./navigation.styles";
 
 export default function Navigation() {
-  const { currentUser } = useContext(UserContext);
+  // const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser)
   const { isCartOpen } = useContext(CartStatusContext);
 
   
