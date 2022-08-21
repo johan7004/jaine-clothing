@@ -15,7 +15,7 @@ import {
 
 export default function Navigation() {
   const { currentUser } = useContext(UserContext);
-  const { cartStatus } = useContext(CartStatusContext);
+  const { isCartOpen } = useContext(CartStatusContext);
 
   
 
@@ -43,7 +43,7 @@ export default function Navigation() {
           )}
           <CartIcon />
         </NavLinksContainer>
-        {cartStatus && <CartDropdown />}
+        {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
     </Fragment>
