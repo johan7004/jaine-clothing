@@ -1,7 +1,7 @@
 import { React, Fragment, useContext } from "react";
 import CartIcon from "./../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-import { UserContext } from "./../../components/contexts/user.context";
+//import { UserContext } from "./../../components/contexts/user.context";
 import { CartStatusContext } from "./../../components/contexts/cart-open.context";
 import { Outlet } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "./../../assets/crown.svg";
