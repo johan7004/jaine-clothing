@@ -41,6 +41,9 @@ export default function SignUpForm() {
 
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
+      if(window.location.href.includes('auth')){
+        window.location = window.location.origin;
+      }
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert(`User email already exist`);

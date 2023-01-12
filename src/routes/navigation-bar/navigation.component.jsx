@@ -37,11 +37,12 @@ export default function Navigation() {
             SHOP
           </NavLinks>
 
-          {currentUser ? (
+          {currentUser ? (            
             <NavLinks as="span" className="nav-link" onClick={signOutHandler}>
               SIGN OUT
             </NavLinks>
-          ) : (
+            
+          ): (
             <NavLinks to="/auth">SIGN IN</NavLinks>
           )}
           <CartIcon />

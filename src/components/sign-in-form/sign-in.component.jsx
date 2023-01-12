@@ -29,6 +29,11 @@ export default function SignInForm() {
     // user object is being destructured from the response.
     // this does not have to be destructred if we use Context pattern and isolate user Auth State from firebase
     await signInWithGooglePopup();
+    if(window.location.href.includes('/auth')){
+      console.log(`your still in auth page`)
+      window.location= window.location.origin;
+    }
+    return
   };
 
   const formSubmit = async (e) => {
@@ -42,6 +47,9 @@ export default function SignInForm() {
       );
 
       resetFormFields();
+      if(window.location.href.include('auth')){
+        window.location = window.location.origin;
+      }
     } catch (error) {
       if (error.code === "auth/wrong-password") {
         alert("incorrect password");
